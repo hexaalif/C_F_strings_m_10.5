@@ -3,10 +3,11 @@
 
 int main()
 {
-    char A[11], B[11];
+    char A[21], B[21], c[42];
     scanf("%s", A);
     scanf("%s", B);
     // printf("%s", A);
+    strcpy(c, A);
     int szA = strlen(A);
     int szB = strlen(B);
     strcat(A, B);
@@ -15,9 +16,10 @@ int main()
 
     // char temp = A[0];
     // char temp2 = B[0];
-    char temp = A[0];
-    A[0] = B[0];
+    char temp = c[0];
+    c[0] = B[0];
     B[0] = temp;
-    printf("%s %s", A, B);
+    printf("%s %s\n", c, B);
+    // printf("%d", c);
     return 0;
 }
